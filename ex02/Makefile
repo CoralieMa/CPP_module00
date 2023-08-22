@@ -3,16 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: cmartino <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: cmartino <cmartino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/21 08:57:53 by cmartino          #+#    #+#              #
-#    Updated: 2023/08/21 08:57:54 by cmartino         ###   ########.fr        #
+#    Updated: 2023/08/22 13:14:04 by cmartino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= myAwesomePhonebook
+NAME	= account
 
-FILES	= megaphone
+FILES	= test \
+			Account
 
 SRCS	= $(addsuffix .cpp, $(FILES))
 

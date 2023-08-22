@@ -6,7 +6,7 @@
 /*   By: cmartino <cmartino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 09:02:02 by cmartino          #+#    #+#             */
-/*   Updated: 2023/08/22 09:37:24 by cmartino         ###   ########.fr       */
+/*   Updated: 2023/08/22 11:47:20 by cmartino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 #include "Contact.class.hpp"
 
 Contact::Contact(void){
-	// std::cout << "Constructor called" << std::endl;
 	return ;
 }
 
 Contact::~Contact(void){
-	// std::cout << "Destructor called" << std::endl;
 	return ;
 }
 

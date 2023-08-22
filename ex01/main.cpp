@@ -6,7 +6,7 @@
 /*   By: cmartino <cmartino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 09:14:02 by cmartino          #+#    #+#             */
-/*   Updated: 2023/08/22 09:55:08 by cmartino         ###   ########.fr       */
+/*   Updated: 2023/08/22 11:57:11 by cmartino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,33 +15,21 @@
 #include "Contact.class.hpp"
 #include "PhoneBook.class.hpp"
 
-void	print_index_contact(Contact contact, int j)
+int	get_index(std::string input)
 {
-	std::cout << j << "|";
-	std::cout << contact.firstName << "|";
-	std::cout << contact.lastName << "|";
-	std::cout << contact.nickName << std::endl;
-}
-
-void	print_index(PhoneBook phoneBook, int j)
-{
-	int	index;
+	if (input.size() != 1 || !isdigit(input[0]))
+		return (-1);
+	if (input[0] >= '0' && input[0] <= '7')
+		return (input[0] - '0');
+	return (-1);
 	
-	index = 0;
-	if (j > 8)
-		j = 8;
-	while (index < j)
-	{
-		print_index_contact(phoneBook.contact[index], index);
-		++index;
-	}
 }
 
 int	main(void)
 {
 	int			i;
 	int			j;
-	// int			index;
+	int			index;
 	PhoneBook	phoneBook;
 	std::string input;
 
@@ -76,12 +64,12 @@ int	main(void)
 				phoneBook.display_PhoneBook(j);
 				std::cout << "Enter the contact's index to display his informations" << std::endl;
 				std::getline (std::cin, input);
-				if (input.size() != 1 || !isdigit(input[0]) || stoi(input) < 0 || stoi(input) > 7)
+				std::cout << std::endl;
+				index = get_index(input);
+				if (index == -1 || index >= j)
 					std::cout << "Wrong input" << std::endl << std::endl;
 				else
-				{
-					phoneBook.contact[stoi(input)].display_contact();
-				}
+					phoneBook.contact[index].display_contact();
 			}
 		}
 		std::cout << "Enter a command : ";
