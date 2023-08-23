@@ -6,7 +6,7 @@
 /*   By: cmartino <cmartino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 09:00:35 by cmartino          #+#    #+#             */
-/*   Updated: 2023/08/22 10:05:26 by cmartino         ###   ########.fr       */
+/*   Updated: 2023/08/23 12:04:16 by cmartino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ std::string	add_data(std::string str){
 	std::string input;
 
 	std::cout << str;
-	std::getline (std::cin, input);
+	input = ft_getline();
 	return (input);
 }
 
@@ -64,4 +64,14 @@ void	PhoneBook::display_PhoneBook(int nb_contact)
 		std::cout << std::endl;
 		++i;
 	}
+}
+
+std::string	ft_getline()
+{
+	std::string	input;
+
+	std::getline (std::cin, input);
+	if (std::cin.eof())
+		std::exit(0);
+	return (input);
 }

@@ -6,7 +6,7 @@
 /*   By: cmartino <cmartino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 09:14:02 by cmartino          #+#    #+#             */
-/*   Updated: 2023/08/22 11:57:11 by cmartino         ###   ########.fr       */
+/*   Updated: 2023/08/23 12:03:45 by cmartino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,15 @@ int	main(void)
 	std::string input;
 
 	std::cout << "Enter a command : ";
-	std::getline (std::cin, input);
+	// std::getline (std::cin, input);
+	input = ft_getline();
+	// std::cout << '|' << input << '|' << std::endl;
 	i = 0;
 	j = 0;
+	// if (std::cin.eof())
+	// 	std::cout << "eof reached" << std::endl;
+	// else
+	// 	std::cout << "eof not reached" << std::endl;
 	while (input != "EXIT")
 	{
 		if (input == "ADD")
@@ -63,7 +69,7 @@ int	main(void)
 			{
 				phoneBook.display_PhoneBook(j);
 				std::cout << "Enter the contact's index to display his informations" << std::endl;
-				std::getline (std::cin, input);
+				input = ft_getline();
 				std::cout << std::endl;
 				index = get_index(input);
 				if (index == -1 || index >= j)
@@ -73,7 +79,7 @@ int	main(void)
 			}
 		}
 		std::cout << "Enter a command : ";
-		std::getline (std::cin, input);
+		input = ft_getline();
 	} 
 	return (0);
 }

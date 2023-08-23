@@ -6,7 +6,7 @@
 /*   By: cmartino <cmartino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 09:00:04 by cmartino          #+#    #+#             */
-/*   Updated: 2023/08/22 08:54:41 by cmartino         ###   ########.fr       */
+/*   Updated: 2023/08/23 12:04:05 by cmartino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ public:
 };
 
 std::string	add_data(std::string str);
+std::string	ft_getline();
 
 #endif

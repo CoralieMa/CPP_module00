@@ -6,14 +6,16 @@
 /*   By: cmartino <cmartino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 13:11:11 by cmartino          #+#    #+#             */
-/*   Updated: 2023/08/22 15:47:13 by cmartino         ###   ########.fr       */
+/*   Updated: 2023/08/23 14:55:26 by cmartino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Account.hpp"
 
-Account::Account(int initial_deposit){
+Account::Account(int initial_deposit) : _amount(initial_deposit){
+	++Account::_nbAccounts;
+	std::cout << "[timestamp]" << " index:" << "?" << ";amount:" << this->_amount << ";created" << std::endl;
 	return ;
 }
 
