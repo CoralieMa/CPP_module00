@@ -6,13 +6,13 @@
 #    By: cmartino <cmartino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/21 08:57:53 by cmartino          #+#    #+#              #
-#    Updated: 2023/08/22 13:14:04 by cmartino         ###   ########.fr        #
+#    Updated: 2023/08/23 16:06:14 by cmartino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= account
 
-FILES	= test \
+FILES	= tests \
 			Account
 
 SRCS	= $(addsuffix .cpp, $(FILES))
