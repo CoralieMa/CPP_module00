@@ -6,7 +6,7 @@
 /*   By: cmartino <cmartino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 09:14:02 by cmartino          #+#    #+#             */
-/*   Updated: 2023/08/23 12:03:45 by cmartino         ###   ########.fr       */
+/*   Updated: 2023/08/29 15:59:36 by cmartino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ int	get_index(std::string input)
 	
 }
 
+// pouvoir EXIT quand on est dans ADD ou dans SEARCh + mettre certaines chises en private dans les classes + ameliorer le code pour affciher le phonebook?
+
 int	main(void)
 {
 	int			i;
@@ -34,15 +36,9 @@ int	main(void)
 	std::string input;
 
 	std::cout << "Enter a command : ";
-	// std::getline (std::cin, input);
 	input = ft_getline();
-	// std::cout << '|' << input << '|' << std::endl;
 	i = 0;
 	j = 0;
-	// if (std::cin.eof())
-	// 	std::cout << "eof reached" << std::endl;
-	// else
-	// 	std::cout << "eof not reached" << std::endl;
 	while (input != "EXIT")
 	{
 		if (input == "ADD")

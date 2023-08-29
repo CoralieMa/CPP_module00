@@ -6,7 +6,7 @@
 /*   By: cmartino <cmartino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 09:02:15 by cmartino          #+#    #+#             */
-/*   Updated: 2023/08/22 09:31:29 by cmartino         ###   ########.fr       */
+/*   Updated: 2023/08/29 13:31:15 by cmartino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,9 @@ public:
 	bool	check_nickname(std::string str);
 	bool	check_phone_nbr(std::string str);
 	bool	check_secret(std::string str);
+
+	private:
+		//to do
 };
 
 void	display(std::string str);
