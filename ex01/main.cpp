@@ -15,7 +15,7 @@
 #include "Contact.class.hpp"
 #include "PhoneBook.class.hpp"
 
-int	get_index(std::string input)
+int	getIndex(std::string input)
 {
 	if (input.size() != 1 || !isdigit(input[0]))
 		return (-1);
@@ -36,7 +36,7 @@ int	main(void)
 	std::string input;
 
 	std::cout << "Enter a command : ";
-	input = ft_getline();
+	input = getline();
 	i = 0;
 	j = 0;
 	while (input != "EXIT")
@@ -44,7 +44,7 @@ int	main(void)
 		if (input == "ADD")
 		{
 			std::cout << std::endl << "***** New contact *****" << std::endl;
-			phoneBook.add_contact(i);
+			phoneBook.addContact(i);
 			std::cout << std::endl;
 			++i;
 			++j;
@@ -63,19 +63,19 @@ int	main(void)
 			}
 			else
 			{
-				phoneBook.display_PhoneBook(j);
+				phoneBook.displayPhoneBook(j);
 				std::cout << "Enter the contact's index to display his informations" << std::endl;
-				input = ft_getline();
+				input = getline();
 				std::cout << std::endl;
-				index = get_index(input);
+				index = getIndex(input);
 				if (index == -1 || index >= j)
 					std::cout << "Wrong input" << std::endl << std::endl;
 				else
-					phoneBook.contact[index].display_contact();
+					phoneBook.contact[index].displayContact();
 			}
 		}
 		std::cout << "Enter a command : ";
-		input = ft_getline();
+		input = getline();
 	} 
 	return (0);
 }

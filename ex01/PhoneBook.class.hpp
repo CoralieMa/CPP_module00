@@ -23,11 +23,11 @@ public:
 	PhoneBook(void);
 	~PhoneBook(void);
 
-	void	add_contact(int i);
-	void	display_PhoneBook(int nb_contact);
+	void	addContact(int i);
+	void	displayPhoneBook(int nb_contact);
 };
 
-std::string	add_data(std::string str);
-std::string	ft_getline();
+std::string	addData(std::string str);
+std::string	getline();
 
 #endif

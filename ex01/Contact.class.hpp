@@ -28,19 +28,19 @@ public:
 	Contact(void);
 	~Contact(void);
 
-	void	display_preview(void);
-	void	display_contact(void);
-	bool	check_first_name(std::string str);
-	bool	check_last_name(std::string str);
-	bool	check_nickname(std::string str);
-	bool	check_phone_nbr(std::string str);
-	bool	check_secret(std::string str);
+	void	displayPreview(void);
+	void	displayContact(void);
+	bool	checkFirstName(std::string str);
+	bool	checkLastName(std::string str);
+	bool	checkNickname(std::string str);
+	bool	checkPhoneNbr(std::string str);
+	bool	checkSecret(std::string str);
 
 	private:
 		//to do
 };
 
 void	display(std::string str);
-bool	check_str(std::string str);
+bool	checkStr(std::string str);
 
 #endif

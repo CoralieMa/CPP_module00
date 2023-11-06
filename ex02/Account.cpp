@@ -20,10 +20,10 @@ int	Account::_totalAmount = 0;
 int	Account::_totalNbDeposits = 0;
 int	Account::_totalNbWithdrawals = 0;
 
-Account::Account(int initial_deposit) : _amount(initial_deposit){
+Account::Account(int initialDeposit) : _amount(initialDeposit){
 	Account::_displayTimestamp();
 	this->_accountIndex = Account::_nbAccounts;
-	Account::_totalAmount += initial_deposit;
+	Account::_totalAmount += initialDeposit;
 	++Account::_nbAccounts;
 	this->_nbDeposits = 0;
 	this->_nbWithdrawals = 0;
@@ -101,8 +101,8 @@ void	Account::displayStatus(void) const{
 }
 
 void	Account::_displayTimestamp(void){
-	std::time_t curr_time = std::time(0);
-	std::tm* 	now = std::localtime(&curr_time);
+	std::time_t currTime = std::time(0);
+	std::tm* 	now = std::localtime(&currTime);
 	
 	std::cout << '[' << (now->tm_year + 1900);
 	std::cout << std::setfill('0') << std::setw(2) << now->tm_mon + 1;

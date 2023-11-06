@@ -21,7 +21,7 @@ Contact::~Contact(void){
 	return ;
 }
 
-void	Contact::display_preview(void)
+void	Contact::displayPreview(void)
 {
 	std::cout << "         " << this->index << "|";
 	display(this->firstName);
@@ -32,7 +32,7 @@ void	Contact::display_preview(void)
 	std::cout << std::endl;
 }
 
-void	Contact::display_contact(void){
+void	Contact::displayContact(void){
 	std::cout << "Index : " << this->index << std::endl;
 	std::cout << "First name : " << this->firstName << std::endl;
 	std::cout << "Last name : " << this->lastName << std::endl;
@@ -41,25 +41,25 @@ void	Contact::display_contact(void){
 	std::cout << "Darkest secret : " << this->secret << std::endl << std::endl;
 }
 
-bool	Contact::check_first_name(std::string str)
+bool	Contact::checkFirstName(std::string str)
 {
 	this->firstName = str;
-	return (check_str(str));
+	return (checkStr(str));
 }
 
-bool	Contact::check_last_name(std::string str)
+bool	Contact::checkLastName(std::string str)
 {
 	this->lastName = str;
-	return (check_str(str));
+	return (checkStr(str));
 }
 
-bool	Contact::check_nickname(std::string str)
+bool	Contact::checkNickname(std::string str)
 {
 	this->nickName = str;
-	return (check_str(str));
+	return (checkStr(str));
 }
 
-bool	Contact::check_phone_nbr(std::string str)
+bool	Contact::checkPhoneNbr(std::string str)
 {
 	size_t	i;
 	size_t	size = str.size();
@@ -77,13 +77,13 @@ bool	Contact::check_phone_nbr(std::string str)
 	return (false);
 }
 
-bool	Contact::check_secret(std::string str)
+bool	Contact::checkSecret(std::string str)
 {
 	this->secret = str;
-	return (check_str(str));
+	return (checkStr(str));
 }
 
-bool	check_str(std::string str){
+bool	checkStr(std::string str){
 	if (str.size() == 0)
 		return (true);
 	return (false);
