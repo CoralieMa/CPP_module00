@@ -6,15 +6,15 @@
 #    By: cmartino <cmartino@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/21 08:57:40 by cmartino          #+#    #+#              #
-#    Updated: 2023/08/22 09:59:44 by cmartino         ###   ########.fr        #
+#    Updated: 2024/01/15 12:06:13 by cmartino         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= myAwesomePhonebook
 
 FILES	= main \
-			Contact.class \
-			PhoneBook.class
+			Contact \
+			PhoneBook
 
 SRCS	= $(addsuffix .cpp, $(FILES))
 

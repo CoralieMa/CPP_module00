@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.class.hpp                                :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmartino <cmartino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 09:00:04 by cmartino          #+#    #+#             */
-/*   Updated: 2023/08/23 12:04:05 by cmartino         ###   ########.fr       */
+/*   Updated: 2024/01/15 11:55:45 by cmartino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_CLASS_HPP
-# define PHONEBOOK_CLASS_HPP
+#ifndef PHONEBOOK_HPP
+# define PHONEBOOK_HPP
 
-# include "Contact.class.hpp"
+# include "Contact.hpp"
 
 class PhoneBook
 {
 public:
-	Contact contact[10];
+	Contact contact[8];
 
 	PhoneBook(void);
 	~PhoneBook(void);

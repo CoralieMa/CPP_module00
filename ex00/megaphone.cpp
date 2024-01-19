@@ -6,11 +6,11 @@
 /*   By: cmartino <cmartino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 08:57:29 by cmartino          #+#    #+#             */
-/*   Updated: 2023/08/23 12:05:19 by cmartino         ###   ########.fr       */
+/*   Updated: 2024/01/16 14:07:05 by cmartino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string>
+#include <cstring>
 #include <iostream>
 
 int main(int argc, char **argv)
@@ -26,7 +26,7 @@ int main(int argc, char **argv)
     else
     {
         i = 1;
-        while ( i < argc)
+        while (i < argc)
         {
            j = 0;
            str = std::string(argv[i]);
@@ -38,10 +38,8 @@ int main(int argc, char **argv)
            }
            std::cout << str;
             ++i;
-            if (i != argc)
-                std::cout << " ";
         }
-        std::cout << std::endl;
+		std::cout << std::endl;
     }
     return (0);
 }

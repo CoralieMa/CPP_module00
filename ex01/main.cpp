@@ -6,26 +6,24 @@
 /*   By: cmartino <cmartino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 09:14:02 by cmartino          #+#    #+#             */
-/*   Updated: 2023/08/29 15:59:36 by cmartino         ###   ########.fr       */
+/*   Updated: 2024/01/16 14:08:48 by cmartino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string>
 #include <iostream>
-#include "Contact.class.hpp"
-#include "PhoneBook.class.hpp"
+#include "Contact.hpp"
+#include "PhoneBook.hpp"
 
 int	getIndex(std::string input)
 {
 	if (input.size() != 1 || !isdigit(input[0]))
 		return (-1);
-	if (input[0] >= '0' && input[0] <= '7')
+	if (input[0] >= '0' && input[0] <= '8')
 		return (input[0] - '0');
 	return (-1);
 	
 }
-
-// pouvoir EXIT quand on est dans ADD ou dans SEARCh + mettre certaines chises en private dans les classes + ameliorer le code pour affciher le phonebook?
 
 int	main(void)
 {
@@ -66,12 +64,11 @@ int	main(void)
 				phoneBook.displayPhoneBook(j);
 				std::cout << "Enter the contact's index to display his informations" << std::endl;
 				input = getline();
-				std::cout << std::endl;
 				index = getIndex(input);
-				if (index == -1 || index >= j)
-					std::cout << "Wrong input" << std::endl << std::endl;
+				if (index <= 0 || index > j)
+					std::cout << "Wrong input " << std::endl << std::endl;
 				else
-					phoneBook.contact[index].displayContact();
+					phoneBook.contact[index - 1].displayContact();
 			}
 		}
 		std::cout << "Enter a command : ";

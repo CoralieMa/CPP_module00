@@ -1,18 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.class.cpp                                :+:      :+:    :+:   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmartino <cmartino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 09:00:35 by cmartino          #+#    #+#             */
-/*   Updated: 2023/08/23 12:04:16 by cmartino         ###   ########.fr       */
+/*   Updated: 2024/01/15 14:36:55 by cmartino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-// #include "Contact.class.hpp"
-#include "PhoneBook.class.hpp"
+#include "PhoneBook.hpp"
 
 PhoneBook::PhoneBook(void){
 	std::cout << "Phone Book created" << std::endl;

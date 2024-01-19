@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.class.cpp                                  :+:      :+:    :+:   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmartino <cmartino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/21 09:02:02 by cmartino          #+#    #+#             */
-/*   Updated: 2023/08/22 11:47:20 by cmartino         ###   ########.fr       */
+/*   Updated: 2024/01/15 12:30:56 by cmartino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "Contact.class.hpp"
+#include "Contact.hpp"
 
 Contact::Contact(void){
 	return ;
@@ -23,7 +23,7 @@ Contact::~Contact(void){
 
 void	Contact::displayPreview(void)
 {
-	std::cout << "         " << this->index << "|";
+	std::cout << "         " << this->index + 1 << "|";
 	display(this->firstName);
 	std::cout << "|";
 	display(this->lastName);
@@ -33,7 +33,7 @@ void	Contact::displayPreview(void)
 }
 
 void	Contact::displayContact(void){
-	std::cout << "Index : " << this->index << std::endl;
+	std::cout << "Index : " << this->index + 1 << std::endl;
 	std::cout << "First name : " << this->firstName << std::endl;
 	std::cout << "Last name : " << this->lastName << std::endl;
 	std::cout << "Nickame : " << this->nickName << std::endl;
